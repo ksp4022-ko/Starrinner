@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>星星跑酷大冒險 第一版</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>⭐ 星星跑酷大冒險</h1>
+      <p>五年級小學生跑酷遊戲｜跳躍、收集金幣、使用道具！</p>
+    </header>
+
+    <section class="status-panel">
+      <div>分數：<span id="score">0</span></div>
+      <div>金幣：<span id="coins">0</span></div>
+      <div>距離：<span id="distance">0</span> m</div>
+      <div>道具：<span id="itemName">無</span></div>
+      <div>最高分：<span id="bestScore">0</span></div>
+    </section>
+
+    <main class="game-wrap">
+      <canvas id="gameCanvas" width="900" height="420"></canvas>
+      <div id="overlay" class="overlay">
+        <h2>準備開始！</h2>
+        <p>按「開始遊戲」或鍵盤 Enter</p>
+        <p class="tip">空白鍵/↑ 跳躍｜Z 使用道具｜手機可按下方按鈕</p>
+        <button id="startBtn">開始遊戲</button>
+      </div>
+    </main>
+
+    <section class="mobile-controls">
+      <button id="jumpBtn">跳躍</button>
+      <button id="useItemBtn">使用道具</button>
+      <button id="restartBtn">重新開始</button>
+    </section>
+
+    <section class="rules">
+      <h2>玩法說明</h2>
+      <ul>
+        <li>跳過障礙物，跑越遠分數越高。</li>
+        <li>吃到金幣可加分。</li>
+        <li>吃到道具後，按 Z 或「使用道具」啟動。</li>
+        <li>護盾可以抵擋一次撞擊，磁鐵可以自動吸金幣。</li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
